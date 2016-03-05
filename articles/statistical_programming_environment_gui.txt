@@ -1,0 +1,18 @@
+TITLE: Statistical Programming Environment (GUI)
+AUTHOR: gdhorne
+DATE:
+DESC: introduction to using rstudio
+FORMAT: markdown
+-----
+BODY:
+
+[RStudio][2014] provides seamless integration with the file system to navigate and
+manipulate files, the version control system to manage and synchronise local
+and remote source code repositories, and the statistical computation and
+software development envrionment.
+
+_This tuorial is coming soon._
+
+[2014]: https://www.rstudio.com
+
+END-----

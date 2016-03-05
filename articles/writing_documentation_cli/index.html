@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="NanoBlogger 3.5-RC1" />
+<meta name="robots" content="all" />
+<meta name="revisit-after" content="31 days" />
+
+<title>Writing Documentation (CLI) | Data Science Boot-Camp Survival Manual</title>
+
+<link rel="stylesheet" href="../../styles/nb_steelblue.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+<link rel="shortcut icon" href="../../images/favicon.ico" />
+<link rel="alternate" type="application/atom+xml"
+title="Atom 1.0"
+href="../../atom.xml"
+/>
+<link rel="alternate" type="application/rss+xml"
+title="RSS 2.0"
+href="../../rss.xml"
+/>
+
+</head>
+
+<body>
+
+<div id="banner">
+	<h1><a href="../../index.html" accesskey="1">Data Science Boot-Camp Survival Manual</a></h1>
+	<span class="description">practical guide to the johns hopkins university data science specialization</span>
+</div><!-- /banner div -->
+
+<div id="container">
+
+	<div class="archives">
+
+		<a id="top"></a>
+		<h2>Writing Documentation (CLI)</h2>
+		<div id="menu">
+			<a href="../../index.html">Main</a>
+		</div>
+		<div class="blogbody">
+			<p>The <a href="https://daringfireball.net/projects/markdown/" target="_blank">markdown language</a>, created by John Gruber, is relatively small and easy to learn in comparison to markup languages such as HTML and XML.</p>
+
+<h3>Sample Markdown</h3>
+
+<p>File: <a href="../../resources/sample.md">sample.md</a></p>
+
+<p>With a portion of this blog as an example we explore some of the more common markdown elements.</p>
+
+<pre>
+    Prologue
+    ===
+
+    # Introduction
+
+    During the next year you will learn the fundamentals of data science. 
+    Surviving the nine courses which make up the [Data Science 
+    Specialization][0001] offered by [Johns Hopkins University][jhu] requires a
+    **strategy**.
+
+    To this end, the focus of the ten-course series including a capstone
+    project is to provide the learner with:
+
+    1. an introduction to the key ideas behind reproducible research,
+    2. an introduction to the tools and techniques to transform raw
+        data into a presentable report,
+    4. an opportunity to gain hands-on practice so you can learn the
+        techniques for yourself, and
+    3. an appreciation of the mathematics & statistics involved in
+        data science.
+
+    ## Core Courses
+
+    The courses comprising the Data Science Specialization are:
+
+    * Data Scientist's Toolbox
+    * R Programming
+    * Exploratory Data Analysis
+    * Getting and Cleaning Data
+    * Reproducible Research
+    * Statistical Inference
+    * Regression Models
+    * Practical Machine Learning
+    * Developing Data Products
+
+
+    [0001]: https://www.coursera.org/specializations/jhu-data-science
+    [jhu]: http://www.jhu.edu
+</pre>
+
+<p><em>Listing 1 Sample markdown document</em></p>
+
+<h3>Markdown Syntax and the Sample Document</h3>
+
+<p>So you can immediately practise each of the markdown elements used in the
+sample document a concise description is supplied with references to the sample
+document.</p>
+
+<p><u>Font Modifiers</u></p>
+
+<p>There are two styles of font modifier supported by standard markdown:</p>
+
+<ul>
+<li>bold (text surrounded by **)</li>
+<li>italics (text surrounded by *)</li>
+</ul>
+
+<p>From the sample document we see that 'strategy' is modified during conversion to
+render bolded, whilst 'Figure 1 Course dependency diagram' is modified during
+conversion to render italicised.</p>
+
+<p><u>Headings</u></p>
+
+<p>There are two styles of headers supported by standard markdown:</p>
+
+<ul>
+<li>setext
+<ul>
+<li>First-level (text underlined by at least 3 equal-signs)</li>
+<li>Secondary-level (text underlined by at least 3 dashes)</li>
+</ul></li>
+<li>atx
+<ul>
+<li>First-level (# preceding text)</li>
+<li>Secondary-level (## preceding text)</li>
+<li>Third-level (### preceding text)</li>
+<li>Fourth-level (#### preceding text)</li>
+</ul></li>
+</ul>
+
+<p>From the sample document we see that 'Prologue' and 'Introduction' are
+first-level headers, and 'Core Courses' is a second-level header.</p>
+
+<p><u>Links</u></p>
+
+<p>There are two styles of links supported by standard markdown:</p>
+
+<ul>
+<li>inline
+<ul>
+<li>URL: [random website][website]</li>
+</ul></li>
+<li>reference
+<ul>
+<li>id: [random website][string of digits | string of terms]</li>
+</ul></li>
+</ul>
+
+<p>From the sample document we see that 'Data Science Specialization' is
+referenced by the id label (0001) whereas 'John Hopkins University' is
+referenced by the id label (jhu). The actual URLs are collected at the end of
+the same document although the labels could appear anywhere in the document.</p>
+
+<p><u>Lists</u></p>
+
+<p>There are two styles of lists supported by standard markdown:</p>
+
+<ul>
+<li><p>ordered list</p>
+
+<ul>
+<li>number (followed by an optional period and two mandatory spaces; physical ordering overrides numeric label during conversion)</li>
+</ul></li>
+<li><p>unordered list</p>
+
+<ul>
+<li>* (asterisk)</li>
+<li>- (dash)</li>
+<li>+ (plus)</li>
+</ul></li>
+</ul>
+
+<p>From the sample document we see an ordered list containing the learner outcomes
+and an unordered list containing the names of each of the nine core courses.</p>
+
+<h3>Hands-on Practise</h3>
+
+<p>A text editor combined with a markdown-to-html converter are the only tools
+necessary to experiment with the markdown-to-HTML conversion process.</p>
+
+<p>Exercise 1:</p>
+
+<p>The first work-flow involves use of nano, markdown, and the bash command shell.</p>
+
+<pre><code>$ nano sample.md
+$ markdown sample.md
+$ markdown sample.md &gt; sample.html
+</code></pre>
+
+<p>Exercise 2:</p>
+
+<p>The second work-flow makes use of vim and the standlone R Console interactive
+command shell with the assistance of the R package 'markdown'.</p>
+
+<pre><code>$ vim sample.md
+$ R
+&gt; install.packages('markdown')
+&gt; library(markdown)
+&gt; cat(markdownToHTML('sample.md'))
+&gt; markdownToHTML('sample.md', 'sample.html')
+&gt; quit()
+</code></pre>
+
+<p>To view sample.html at the command line we use a text-mode web browser. To exit
+the web browser type 'q' followed by 'y'.</p>
+
+<pre><code>$ w3m sample.html  # any images will not be rendered
+</code></pre>
+
+<p>Later in the boot-camp we learn how to produce a markdown document combining
+text and executable R code using R markdown with command line R and
+RStudio. The output formats include HTML, MD, and PDF.</p>
+		</div>
+		<div class="menu">
+			<a href="#top">&#47;&#92;</a>
+		</div>
+
+	</div><!-- /archives -->
+
+</div><!-- /container -->
+
+</body>
+</html>

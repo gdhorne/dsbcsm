@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="NanoBlogger 3.5-RC1" />
+<meta name="robots" content="all" />
+<meta name="revisit-after" content="31 days" />
+
+<title>Statistical Programming Environment (CLI) | Data Science Boot-Camp Survival Manual</title>
+
+<link rel="stylesheet" href="../../styles/nb_steelblue.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+<link rel="shortcut icon" href="../../images/favicon.ico" />
+<link rel="alternate" type="application/atom+xml"
+title="Atom 1.0"
+href="../../atom.xml"
+/>
+<link rel="alternate" type="application/rss+xml"
+title="RSS 2.0"
+href="../../rss.xml"
+/>
+
+</head>
+
+<body>
+
+<div id="banner">
+	<h1><a href="../../index.html" accesskey="1">Data Science Boot-Camp Survival Manual</a></h1>
+	<span class="description">practical guide to the johns hopkins university data science specialization</span>
+</div><!-- /banner div -->
+
+<div id="container">
+
+	<div class="archives">
+
+		<a id="top"></a>
+		<h2>Statistical Programming Environment (CLI)</h2>
+		<div id="menu">
+			<a href="../../index.html">Main</a>
+		</div>
+		<div class="blogbody">
+			<p><a href="https://www.rstudio.com" target="_blank">RStudio</a> provides seamless integration with the file system to navigate and
+manipulate files, the version control system to manage and synchronise local
+and remote source code repositories, and the statistical computation and
+software development envrionment. However, becoming comfortable with the
+command line will improve our productivity as data analysis projects increase
+in sophistication and work-flow automation arises.</p>
+
+<h3>R at the Command Line</h3>
+
+<p><a href="https://cran.r-project.org" target="<em>blank">R</a> is a statistical programming application featuring interactive and
+scripted statistical computations and graphics. The base system provides access
+to pre-installed packages of functions as well as permitting the user to
+install external packages available from the
+<a href="https://cran.r-project.org" target="</em>blank">Comprehensive R Archive Network</a> (CRAN) and other sources. At the
+command line level R can be used interactively and scripted.</p>
+
+<h4>Interactive Mode</h4>
+
+<pre><code>$ R
+&gt; print(1 + 2)
+[1] 3
+&gt; quit()
+$ _
+</code></pre>
+
+<h4>Scripted Mode</h4>
+
+<pre><code>$ echo "print(1 + 2)" &gt; adder.r
+$ Rscript adder.r
+[1] 3
+$ _
+</code></pre>
+		</div>
+		<div class="menu">
+			<a href="#top">&#47;&#92;</a>
+		</div>
+
+	</div><!-- /archives -->
+
+</div><!-- /container -->
+
+</body>
+</html>

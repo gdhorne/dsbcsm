@@ -1,0 +1,85 @@
+TITLE: Package Installation (CLI)
+AUTHOR: gdhorne
+DATE:
+DESC: introduction to installing r packages
+FORMAT: markdown
+-----
+BODY:
+
+[RStudio][2014] provides seamless integration with the file system to navigate and
+manipulate files, the version control system to manage and synchronise local
+and remote source code repositories, and the statistical computation and
+software development envrionment. However, becoming comfortable with the
+command line will improve our productivity as data analysis projects increase
+in sophistication and work-flow automation arises.
+
+### R Package and CRAN Mirror Management Commands
+
+[R][2009] is a statistical programming application featuring interactive and
+scripted statistical computations and graphics. The base system provides access
+to pre-installed packages of functions as well as permitting the user to
+install external packages available from the
+[Comprehensive R Archive Network][2009] (CRAN) and other sources.
+
+### Hands-on Practise
+
+Preliminaries: The first time we use the install.packages() function R prompts
+us to select a personal library and a CRAN mirror. Since we want to share the
+same personal library between R and RStudio only respond 'y'es to the library
+~/R/packages. Selecting a CRAN mirror each time is annoying so we create a
+configuration file named '.Rprofile' (note the leading period) in our ${HOME}
+directory.
+
+File: [.Rprofile](../../resources/Rprofile)
+
+	local({
+		r <- getOption("repos")
+		r["CRAN"] <- "http://mirror.its.dal.ca/cran/"
+		options(repos = r)
+	})
+
+Substitute 'http://mirror.its.dal.ca/cran/' for a [CRAN mirror][2013] geographically
+closest to you.
+
+Exercise 1:
+
+Install the R package 'devtools' which is required when installing other R
+packages from source code in the absence of a pre-compiled version of the
+package.
+
+	$ R
+	> install.packages('devtools') # quotation marks (single/double) are mandatory
+	> library(devtools)            # quotation marks are not mandatory
+	> quit()
+
+Exercise 2:
+
+Packages included with the base R system only need to be loaded into the
+environment. Load the R package 'KernSmooth'.
+
+	$ R
+	> library(KernSmooth)
+	> quit()
+
+Exercise 3:
+
+List the functions within the R package 'base'.
+
+	$ R
+	> ls(pos = "package:package_name") # substitute 'base' for package_name
+
+Exercise 4:
+
+Read the man(ual) page for the summary() function in R package 'base'. Type 'q'
+to exit the manpage, press the SPACEBAR to scroll down one screen, or use the
+cursor keys to move forward or backward.
+
+	$ R
+	> ?summary
+	> quit()
+
+[2009]: https://cran.r-project.org
+[2013]: https://cran.r-project.org/mirrors.html
+[2014]: https://www.rstudio.com
+
+END-----

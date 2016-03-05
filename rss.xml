@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <?xml-stylesheet type="text/css" href="http://localhost/please/edit/me/styles/feed.css"?>
+<rss version="2.0"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:admin="http://webns.net/mvcb/"
+ xmlns:atom="http://www.w3.org/2005/Atom"
+>
+<channel>
+<title>Data Science Boot-Camp Survival Manual</title>
+<atom:link href="http://localhost/please/edit/me/rss.xml" rel="self" type="application/rss+xml" />
+<link>http://localhost/please/edit/me</link>
+<description>practical guide to the johns hopkins university data science specialization</description>
+<dc:language>en-us</dc:language>
+<dc:creator>blogger</dc:creator>
+<dc:date>2016-03-04T22:49:30+00:00</dc:date>
+<admin:generatorAgent rdf:resource="http://nanoblogger.sourceforge.net" />
+
+<item>
+<link>http://localhost/please/edit/me/archives/2016/03/02/data_scientists_toolbox/index.html</link>
+<guid isPermaLink="true">http://localhost/please/edit/me/archives/2016/03/02/data_scientists_toolbox/index.html</guid>
+<title>Data Scientist's Toolbox</title>
+<dc:date>2016-03-02T07:33:35+00:00</dc:date>
+<dc:creator>gdhorne</dc:creator>
+
+<description><![CDATA[<p>The foundational course, <a href="https://www.coursera.org/learn/data-scientists-tools" target="_blank">Data Scientist's Toolbox</a>, is a high-level
+overview of the specialisation. This course lays the groundwork for the
+nine-course series plus capstone project. We will learn basic skills founded on
+data science methodology rather than data science technique using a
+<a href="./articles/data_scientists_toolbox/index.html">toolset</a>. Throughout boot-camp
+and the data specialisation courses this toolbox will be our survival kit.</p>]]></description>
+
+</item>
+<item>
+<link>http://localhost/please/edit/me/archives/2016/03/01/welcome_to_boot-camp/index.html</link>
+<guid isPermaLink="true">http://localhost/please/edit/me/archives/2016/03/01/welcome_to_boot-camp/index.html</guid>
+<title>Welcome to Boot-Camp</title>
+<dc:date>2016-03-01T06:27:39+00:00</dc:date>
+<dc:creator>gdhorne</dc:creator>
+
+<description><![CDATA[<p>Welcome recruits!</p>
+
+<p>I have served as a Community Teaching Assistant (CTA) and Community Mentor for 
+various courses in the <a href="https://www.coursera.org/specializations/jhu-data-science" target="<em>blank">Data Science Specialization</a> offered by
+<a href="https://www.jhu.edu" target="</em>blank">Johns Hopkins University</a> between May 2014 and April 2016.</p>
+
+<p>The <a href="https://www.coursera.org/specializations/jhu-data-science" target="_blank">Data Science Specialization</a> is a challenging nine-course sequence
+focusing on the fundamentals of data science. Success requires a strategy.
+The purpose of this blog to support each of you with the knowledge and practical 
+skills to complete the specialisation. The Data Science Boot-Camp Survival
+Manual has been developed independently of Johns Hopkins University and 
+Coursera. It is provided as a convenience to participants in the Data Science
+Specialization and as a practical introduction to data science for the general
+public.</p>
+
+<p>Read the full introduction to the blog in the article
+<a href="./articles/data_science_boot-camp/index.html">Data Science Boot-Camp</a>
+to discover how it aligns with the Data Science Specialization.</p>]]></description>
+
+</item>
+</channel>
+</rss>

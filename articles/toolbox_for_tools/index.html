@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="NanoBlogger 3.5-RC1" />
+<meta name="robots" content="all" />
+<meta name="revisit-after" content="31 days" />
+
+<title>Toolbox for Tools | Data Science Boot-Camp Survival Manual</title>
+
+<link rel="stylesheet" href="../../styles/nb_steelblue.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+<link rel="shortcut icon" href="../../images/favicon.ico" />
+<link rel="alternate" type="application/atom+xml"
+title="Atom 1.0"
+href="../../atom.xml"
+/>
+<link rel="alternate" type="application/rss+xml"
+title="RSS 2.0"
+href="../../rss.xml"
+/>
+
+</head>
+
+<body>
+
+<div id="banner">
+	<h1><a href="../../index.html" accesskey="1">Data Science Boot-Camp Survival Manual</a></h1>
+	<span class="description">practical guide to the johns hopkins university data science specialization</span>
+</div><!-- /banner div -->
+
+<div id="container">
+
+	<div class="archives">
+
+		<a id="top"></a>
+		<h2>Toolbox for Tools</h2>
+		<div id="menu">
+			<a href="../../index.html">Main</a>
+		</div>
+		<div class="blogbody">
+			<p>As a convenience to participants in this bootcamp a pre-assembled toolchest 
+suitable for learning the fundamentals of data science is available as a
+<a href="https://www.docker.com" target="<em>blank">Docker</a> container image in the <a href="https://hub.docker.com/r/gdhorne/data-scientists-toolbox" target="</em>blank">data-science-toolbox</a> repository. 
+Furthermore, this container is ready for use with the
+<a href="https://www.coursera.org/specializations/jhu-data-science" target="_blank">Data Science Specialization</a>.</p>
+
+<h3>The Toolbox</h3>
+
+<p>Download and install the <a href="https://www.docker.com" target="<em>blank">Docker</a> software for Apple Mac OS X, GNU/Linux, or 
+Microsoft Windows following the <a href="https://docs.docker.com/linux" target="</em>blank">instructions</a> appropriate to the
+operating system. Download and install the <a href="https://git-scm.com" target="_blank">Git</a> software for Apple Mac
+OS X, GNU/Linux, and Microsoft Windows.</p>
+
+<p>Retrieve the <a href="https://github.com/gdhorne/data-scientists-toolbox" target="_blank">data-science-toolbox</a> build repository to create the 
+container.</p>
+
+<pre><code>$ git clone https://github.com/gdhorne/data-scientists-toolbox
+</code></pre>
+
+<p>For ease of instantiating an instance of the container image a script named
+'container.sh' can be used to manage the entire lifecycle. For Microsoft
+Windows users it is recommended that <a href="https://git-for-windows.github.io" target="<em>blank">Git Bash</a> be installed instead of
+the standard <a href="https://git-for-windows.github.io" target="</em>blank">Git</a> software because it provides an *nix-like command line
+environment.</p>
+
+<p>Create the container, optionally mapping a host file system share for storage.
+The file system share name '/home/me/datascience' is user selectable and host
+file system dependent. If no local file system share is desired simply omit the
+fourth argument '/home/me/datascience'. The container instance name 'toolbox',
+in these instructions, is user selectable at time of creation.</p>
+
+<pre><code>$ ./container.sh create toolbox gdhorne/data-scientists-toolbox \
+        /home/me/datascience
+</code></pre>
+
+<ul>
+<li>Apple Mac OS X: /Users/username/directory</li>
+<li>GNU/Linux: /home/username/directory</li>
+<li>Microsoft Windows:  /c/Users/directory (allegedly)</li>
+</ul>
+
+<p>Verify the container 'toolbox' has been successfully created and is running.</p>
+
+<pre><code>$ ./container.sh status
+</code></pre>
+
+<p>Stop the container 'toolbox'.</p>
+
+<pre><code>$ ./container.sh stop toolbox
+</code></pre>
+
+<p>Start the container 'toolbox'.</p>
+
+<pre><code>$ ./container.sh start toolbox
+</code></pre>
+
+<p>To learn more about the container lifecycle management features supported by
+'container.sh' type,</p>
+
+<pre><code>$ ./container.sh --help
+</code></pre>
+
+<h3>The Applications</h3>
+
+<p>As currently configured the container includes Git and R for which RStudio
+Server provides full integration, vim and nano text editors, w3m text-mode web 
+browser, and markdown. After creating the container these applications are
+accessible within a web browser.</p>
+
+<p><br></p>
+
+<table>
+    <tr>
+        <td></td><td>RStudio:</td><td>http://127.0.0.1:8787<br><br>
+
+                UserID: dst<br>
+                Password: science
+        </td>
+    </tr>
+    <tr>
+        <td colspan=3>
+            <br><br><img alt="rstudio server" src="http://127.0.0.1/dsbcsm/images/rstudio_server.png" width="575px" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan=3><i>Figure 1 RStudio Server</i></td>
+    </tr>
+</table>
+
+<p><br></p>
+
+<table>
+    <tr>
+        <td></td><td>WeTTY:</td><td>http://127.0.0.1:8000<br><br>
+
+                UserID: dst<br>
+                Password: science
+        </td>
+    </tr>
+    <tr>
+        <td colspan=3>
+            <br><br><img alt="wetty" src="http://127.0.0.1/dsbcsm/images/wetty.png" width="575px" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan=3><i>Figure 2 WeTTY Terminal Console</i></td>
+    </tr>
+</table>
+		</div>
+		<div class="menu">
+			<a href="#top">&#47;&#92;</a>
+		</div>
+
+	</div><!-- /archives -->
+
+</div><!-- /container -->
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+TITLE: Data Scientist's Toolbox
+AUTHOR: gdhorne
+DATE: Wed Mar  2 07:33:35 UTC 2016
+DESC: foundational course providing a high-level overview of the data science specialisation
+FORMAT: markdown
+-----
+BODY:
+<p>The foundational course, <a href="https://www.coursera.org/learn/data-scientists-tools" target="_blank">Data Scientist's Toolbox</a>, is a high-level
+overview of the specialisation. This course lays the groundwork for the
+nine-course series plus capstone project. We will learn basic skills founded on
+data science methodology rather than data science technique using a
+<a href="./articles/data_scientists_toolbox/index.html">toolset</a>. Throughout boot-camp
+and the data specialisation courses this toolbox will be our survival kit.</p>
+END-----

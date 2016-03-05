@@ -1,0 +1,216 @@
+TITLE: Data Science Boot-Camp
+AUTHOR: gdhorne
+DATE: Tue Mar  1 06:33:04 UTC 2016
+DESC: introduction to the boot camp for the data science specialisation offered by johns hopkins univeristy
+FORMAT: markdown
+-----
+BODY:
+
+Welcome recruits!
+
+The [Data Science Specialization][1000] offered by 
+[Johns Hopkins University][1001] is a challenging nine-course sequence
+focusing on the fundamentals of data science. Success
+requires a strategy. The purpose of this blog to equip each of you with the
+knowledge and skills to complete the specialisation.
+
+According to Jeff Leek the keyword in "data science" is science not data.
+An article in Financial Times posed the question "Big data: are we making a big 
+mistake?"<sup>1</sup>, arguing for a rigorous methodology. An article
+"The Data Science Methology", published on Data Science 101, argues for adoption
+of the scientific method familiar to scientists in the natural sciences.
+<sup>2</sup>
+
+Data Science Methodology 
+
+1. problem formulation (hypothesis)
+2. obtain data (experiment)
+3. analysis (validate or refute hypothesis)
+4. data product (report)
+
+The courses in the [Johns Hopkins University][1001] [Data Science Specialization][1000]
+"emphasise a data science methodology rather than focusing primarily on data 
+science technique. The method is not dependent upon the dataset size; it scales
+from small data to big data. The data science method equates to the scientific 
+method used in the natural sciences. To this end, the focus of the ten-course 
+series including a capstone project is to provide the learner with:
+
+- an introduction to the key ideas behind reproducible research,
+- an introduction to the tools and techniques to transform raw data into a presentable report,
+- an opportunity to gain hands-on practice, and 
+- an appreciation of the mathematics & statistics involved in data science.
+
+[T]he instructors have taken care throughout to demonstrate 
+a responsible, scientifically-based approach to collecting, curating and 
+analyzing data sources," says specialisation participant John Frederick Thiels.
+
+### Core Courses
+
+The courses comprising the Data Science Specialization are:
+
+1. Data Scientist's Toolbox
+2. R Programming
+3. Getting and Cleaning Data
+4. Exploratory Data Analysis
+5. Reproducible Research
+6. Statistical Inference
+7. Regression Models
+8. Practical Machine Learning
+9. Developing Data Products
+
+These courses taught by Brian Caffo, Jeff Leek, and Roger D. Peng enable the 
+learner to get the foundational skills. While the lectures and assignments 
+build these foundational skills, learners often required further explanations. 
+The course forums allow learners to discuss the lecture topics and 
+assignments. As a Community Teaching Assistant (CTA) it became evident a 
+companion guide would be beneficial. Eventually the instructors released a
+series of e-books which began as compendiums of the existing lecture notes and
+now provide further coverage of the topics.
+
+### Capstone Project Course
+
+If you have completed all of the core courses on Signature Track, you will be
+eligible to register for the capstone project course.
+
+### Structure of the Boot-Camp Survival Manual
+
+Boot-camp is structured as a set of related topics each covering one or more of
+the core courses. A tutorial-style emphasising practical application enables
+recruits to learn the work-flow typically practiced throughout a data analysis
+project.
+
+#### The Data Scientist's Toolbox
+
+URL: https://www.coursera.org/learn/data-scientists-tools
+
+[Synopsis:][1002] *"Get an overview of the data, questions, and tools that data 
+analysts and data scientists work with. This is the first course in the Johns 
+Hopkins Data Science Specialization."*
+
+#### R Programming
+
+URL: https://www.coursera.org/learn/r-programming
+
+[Synopsis:][1003] *"Learn how to program in R and how to use R for effective 
+data analysis. This is the second course in the Johns Hopkins Data Science 
+Specialization."*
+
+#### Getting and Cleaning Data
+
+URL: https://www.coursera.org/learn/data-cleaning
+
+[Synopsis:][1004] *"Learn how to gather, clean, and manage data from a variety 
+of sources. This is the third course in the Johns Hopkins Data Science 
+Specialization."*
+
+#### Exploratory Data Analysis
+
+URL: https://www.coursera.org/learn/exploratory-data-analysis
+
+[Synopsis:][1005] *"Learn the essential exploratory techniques for summarizing 
+data. This is the fourth course in the Johns Hopkins Data Science 
+Specialization."*
+
+#### Reproducible Research
+
+URL: https://www.coursera.org/learn/reproducible-research
+
+[Synopsis:][1006] *"Learn the concepts and tools behind reporting modern data 
+analyses in a reproducible manner. This is the fifth course in the Johns 
+Hopkins Data Science Specialization."*
+
+#### Statistical Inference, Regression Models, and Practical Machine Learning
+
+URL: https://www.coursera.org/learn/statistical-inference
+
+[Synopsis:][1007] *"Learn how to draw conclusions about populations or 
+scientific truths from data. This is the sixth course in the Johns Hopkins Data 
+Science Course Track."*
+
+URL: https://www.coursera.org/learn/regression-models
+
+[Synopsis:][1008] *"Learn how to use regression models, the most important 
+statistical analysis tool in the data scientist's toolkit. This is the seventh 
+course in the Johns Hopkins Data Science Specialization."*
+
+URL: https://www.coursera.org/learn/practical-machine-learning
+
+[Synopsis:][1009] *"Learn the basic components of building and applying 
+prediction functions with an emphasis on practical applications. This is the 
+eighth course in the Johns Hopkins Data Science Specialization."*
+
+#### Developing Data Products
+
+URL: https://www.coursera.org/learn/data-products
+
+[Synopsis:][1010] *"Learn the basics of creating data products using Shiny, 
+R packages, and interactive graphics. This is the ninth course in the Johns 
+Hopkins Data Science Specialization."*
+
+#### Data Science Capstone
+
+URL: https://www.coursera.org/learn/data-science-project
+
+[Synopsis:][1011] *"The capstone project class will allow students to create a 
+usable/public data product that can be used to show your skills to potential 
+employers. Projects will be drawn from real-world problems and will be 
+conducted with industry, government, and academic partners. "*
+
+Course synposes quoted from the course information pages at [Coursera][1001] as at 1 April 2015.
+
+## Course Dependency and Recommended Sequence
+
+Although the courses are standalone, the knowledge is cumulative. The 
+pedagogical [course dependencies][1013] are available from Johns Hopkins 
+University.
+
+<img alt="course dependency diagram" src="http://127.0.0.1/dsbcsm/images/jeff_jetton_dss_dependencies.png" width="575px" />
+&nbsp;&nbsp;&nbsp;&nbsp;*Figure 1 Course dependency diagram (Jeff Jetton: created July 2014; used with permission)*
+
+You need a language or system to perform the tasks (R Programming) and data to 
+analyse (Getting and Cleaning Data) to get a sense of the data (Exploratory 
+Data Analysis) before building models and drawing inferences (Statistical 
+Inference, Regression Models) or making predictions (Practical Machine 
+Learning) from the data before presenting your conclusions and supporting 
+evidence (Building Data Products, Reproducible Research).
+
+The recommended mathematics background is linear algebra and introductory 
+statistics (descriptive and inferential). Statistical Inference and Regression 
+Models, courses in this specialisation, cover all the basic statistical 
+concepts forming a solid foundation for subsequent courses in the Data Science 
+Specialization. These courses along with Practical Machine Learning are the 
+theoretical underpinnings, while the other six courses are
+applied in nature: obtaininng data, scrubbing data, exploring data, modeling 
+data, and interpreting data collectively known as the OSEMN (prounounced as 
+awesome) model.
+
+**Question:** Are you up to the challenge of Johns Hopkins University's Data 
+Science Specialization?
+
+Again welcome to the Data Science Boot-Camp. Review the "*Data Science 
+Boot-Camp Survival Manual*" on a regular basis throughout your training.
+
+*Disclaimer: The Data Science Boot-Camp Survival Manual blog is not affiliated
+with nor specifically endorsed by Johns Hopkins University. This blog is the
+work of a long-time Community Teaching Assistant.*
+
+<hr>  
+1 Financial Times. Big Data. URL: http://www.ft.com/cms/s/2/21a6e7d8-b479-11e3-a09a-00144feabdc0.html#axzz3W3CRUPok  
+2 Data Science 101. The Data Science Methology. URL: http://101.datascience.community/2014/03/13/the-data-science-methology/
+
+[1000]: https://www.coursera.org/specializations/jhu-data-science
+[1001]: https://www.jhu.edu
+[1002]: https://www.coursera.org/learn/data-scientists-tools 
+[1003]: https://www.coursera.org/learn/r-programming 
+[1004]: https://www.coursera.org/learn/data-cleaning
+[1005]: https://www.coursera.org/learn/exploratory-data-analysis
+[1006]: https://www.coursera.org/learn/reproducible-research
+[1007]: https://www.coursera.org/learn/statistical-inference
+[1008]: https://www.coursera.org/learn/regression-models
+[1009]: https://www.coursera.org/learn/practical-machine-learning
+[1010]: https://www.coursera.org/learn/data-products
+[1011]:	https://www.coursera.org/learn/data-science-project 
+[1012]: https://www.coursera.org
+[1013]: https://d396qusza40orc.cloudfront.net/rprog/doc/JHDSS_CourseDependencies.pdf
+
+END-----

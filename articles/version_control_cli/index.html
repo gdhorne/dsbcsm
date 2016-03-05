@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="NanoBlogger 3.5-RC1" />
+<meta name="robots" content="all" />
+<meta name="revisit-after" content="31 days" />
+
+<title>Version Control (CLI) | Data Science Boot-Camp Survival Manual</title>
+
+<link rel="stylesheet" href="../../styles/nb_steelblue.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+<link rel="shortcut icon" href="../../images/favicon.ico" />
+<link rel="alternate" type="application/atom+xml"
+title="Atom 1.0"
+href="../../atom.xml"
+/>
+<link rel="alternate" type="application/rss+xml"
+title="RSS 2.0"
+href="../../rss.xml"
+/>
+
+</head>
+
+<body>
+
+<div id="banner">
+	<h1><a href="../../index.html" accesskey="1">Data Science Boot-Camp Survival Manual</a></h1>
+	<span class="description">practical guide to the johns hopkins university data science specialization</span>
+</div><!-- /banner div -->
+
+<div id="container">
+
+	<div class="archives">
+
+		<a id="top"></a>
+		<h2>Version Control (CLI)</h2>
+		<div id="menu">
+			<a href="../../index.html">Main</a>
+		</div>
+		<div class="blogbody">
+			<p><a href="https://www.rstudio.com" target="_blank">RStudio</a> provides seamless integration with the file system to navigate and
+manipulate files, the version control system to manage and synchronise local
+and remote source code repositories, and the statistical computation and
+software development envrionment. However, becoming comfortable with the
+command line will improve our productivity as data analysis projects increase
+in sophistication and work-flow automation arises.</p>
+
+<h3>Git Commands</h3>
+
+<p><a href="https://git-scm.com" target="_blank">Git</a> is a distributed version control system allowing any number of
+people to collaboratively contribute to software development or other projects.</p>
+
+<p>Let's start exploring basic local and remote repository management at the
+command-line. Open a web browser tab and type 'http://127.0.0.1:8000' to access
+a terminal session. The user name and password are provided in the
+<a href="../toolbox_for_tools/index.html">Toolbox for Tools</a> tutorial.
+By learning a few basic commands to manage a repository we will feel more at
+ease and understand what is going on behind the scenes when using RStudio.</p>
+
+<table>
+    <tr>
+        <th>Command</th>
+        <th>Description</th>
+        <th>Common Flags</th>
+        <th>Arguments</th>
+    </tr>
+    <tr>
+        <td>git init</td>
+        <td>initialise a local repository;<br>default is current working directory</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td>git branch</td>
+        <td>determine the current branch</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td>git checkout</td>
+        <td>create a new branch in the current repository<br>change to another branch</td>
+        <td>-b new_branch</td>
+        <td>branch_name<br><br>(mandatory)</td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td>git add</td>
+        <td>add files to the local repository</td>
+        <td>-A (add)<br><br>-u (track file name changes and deletions)</td>
+        <td>[directory_path/][file_name]<br><br>(mandatory)</td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td>git commit</td>
+        <td>commit any changes the local repository</td>
+        <td>-a (add)<br><br>-m "message"</td>
+        <td>[directory_path/][file_name]<br><br>"a string of characters"<br><br>(optional, mandatory)</td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td>git pull</td>
+        <td>fetch changes from another repository and merge with current repository</td>
+        <td></td>
+        <td>source target<br><br>(mandatory)</td>   
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td>git push</td>
+        <td>update remote repository with changes from the local repository</td>
+        <td>-u (add upstream (tracking) reference)</td>
+        <td>target source <br><br>(mandatory unless -u flag present)</td>   
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td>git status</td>
+        <td>reports the status of the local repository</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td>git show</td>
+        <td>eports the historical differences of the files<br>in the local repository</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td>git merge</td>
+        <td>flatten commit history before merging source branch with target branch</td>
+        <td>--squash</td>
+        <td>branch_name<br><br>(mandatory)</td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td colspan=4>Arguments in brackets are optional but if the 'mandatory' designation is present, at least one of the arguments must be supplied.</td>
+    </tr>
+</table>
+
+<h3>Hands-on Practise: Basic Git Commands</h3>
+
+<p>For each of the examples in this section type the commands to the right of the
+command prompt ($) to interactively follow along these examples. Take your time
+working through the commands until you fully understand why each command
+produces the observed results.</p>
+
+<p>Preliminaries: Configure your email address and username to be used by Git. The
+flag --global means apply the configuration to all of your Git repositories on
+the computer. The flag --local means apply the confoguration to only the
+ current Git repository.</p>
+
+<pre><code>$ git config [--local | --global] user.email "userid@domain.tld"
+$ git config [--local | --global] user.name "username"
+</code></pre>
+
+<p>Exercise 1:</p>
+
+<p>Create a local repository.</p>
+
+<pre><code>$ mkdir data/sample
+$ cd data/sample
+$ pwd
+/home/dst/data/sample
+$ git init
+Initialized empty Git repository in /home/dst/data/sample/.git/
+$ ls -la
+drwxrwxr-x 3 dst dst 4096 Jan 13 19:07 .
+drwxrwxr-x 3 dst dst 4096 Jan 13 19:07 ..
+drwxrwxr-x 7 dst dst 4096 Apr  5 19:09 .git
+</code></pre>
+
+<p>Exercise 2:</p>
+
+<p>Create an empty README.md file in the local repository.</p>
+
+<pre><code>$ touch README.md
+$ git add .
+$ git commit -m "initial commit"
+
+[master (root-commit) b7c48f3] initial commit
+1 file changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 README.md
+
+$ git status
+
+On branch master
+nothing to commit, working directory clean
+
+$ git show
+
+commit b7c48f3e5cdc772e6a198c3633acd853a69a5778
+Author: gdhorne &lt;nomail@mail.com&gt;
+Date: Wed Jan 13 19:21:21 2016 -0400
+
+    initial commit
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..e69de29
+</code></pre>
+
+<p>Exercise 3:</p>
+
+<p>Edit the README.md file and type the following markdown into the file.</p>
+
+<p>Markdown:</p>
+
+<pre>
+* Avro
+* Harrier
+* Hornet  
+</pre>
+
+<pre><code>$ nano README.md
+</code></pre>
+
+<p>Update the local repository's tracking database.</p>
+
+<pre><code>$ git add -A .
+$ git commit -m "military aircraft"
+
+[master 8fd8eb8] added content
+1 file changed, 3 insertions(+)
+</code></pre>
+
+<p>Exercise 4:</p>
+
+<p>Edit the README.md file by adding '* Raptor' and changing 'Avro' to 'Avro Arrow'.</p>
+
+<pre><code>$ nano README.md
+</code></pre>
+
+<p>Update the local repository's tracking database.</p>
+
+<pre><code>$ git add .
+$ git commit -m "added Raptor and changed Arrow"
+
+[master 87d0125] added Raptor
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+</code></pre>
+
+<p>Exercise 5:</p>
+
+<p>Determine whether there are any uncommitted changes.</p>
+
+<pre><code>$ git status
+On branch master
+nothing to commit, working directory clean
+
+$ git show
+
+commit 87d012594aa5a8a39e99d4728dc8c853779587ab
+Author: gdhorne &lt;nomail@mail.com&gt;
+Date:   Wed Jan 13 19:22:51 2016 -0400 
+
+    added Raptor and changed Arrow
+
+diff --git a/README.md b/README.md
+index 354fa34..8290523 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,4 @@
+-* Avro
++* Avro Arrow
+ * Harrier
+ * Hornet
++* Raptor
+</code></pre>
+
+<p>Exercise 6:</p>
+
+<p>Add a new branch 'aircraft' to the local repository and make it the active
+branch.</p>
+
+<pre><code>$ git checkout -b aircraft
+Switched to a new branch 'aircraft'
+
+$ git status
+On branch aircraft
+nothing to commit, working directory clean
+</code></pre>
+
+<p>Exercise 7:</p>
+
+<p>Merge the contents of the 'master' branch with the 'aircraft' branch.</p>
+
+<pre><code>$ git merge master
+Already up-to-date.
+</code></pre>
+
+<p>Exercise 8:</p>
+
+<p>Switch to the 'master' branch.</p>
+
+<pre><code>$ git checkout master
+Switched to branch 'master'
+
+$ git status
+On branch master
+nothing to commit, working directory clean
+</code></pre>
+
+<h3>Hands-on Practise: GitHub - Repository Hosting Service</h3>
+
+<p>GitHub is a repository hosting service supporting the Git distributed version
+control system which facilitates collaboration between any number of people.
+Throughout this boot-camp there will be ample opportunity to gain hands-on
+experience with local and remote repository management. Additionally, some of
+the <a href="https://www.jhu.edu" target="_blank">Data Science Specialization</a> courses require learners to submit their
+programming assignments via GitHub as part of a peer assessment grading
+process.</p>
+
+<p><img alt="course dependency diagram"
+src="../../images/github.png" width="575px" />
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Figure 1 Create an account with GitHub</em></p>
+
+<p>Before creating a repository on GitHub you must create an account preferably
+with the same name email address used when configuring Git. If you use an
+alternate email address and username for your GitHub account, you can associate
+the username and email address with this account.</p>
+
+<p><img alt="course dependency diagram"
+src="../../images/personal_plan.png" width="575px" />
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Figure 2 Choose a Personal Plan</em></p>
+
+<p>Select the repository hosting plan for your account. The default free plan is
+sufficient for peer assessments during the <a href="https://www.coursera.org/specializations/jhu-data-science" target="_blank">Johns Hopkins University</a>
+[Data Science Specialization[1000]].</p>
+
+<p><img alt="new account orientation dashboard"
+src="../../images/new_account_orientation_dashboard.png" width="575px" />
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Figure 3 New Account Orientation Dashboard</em></p>
+
+<p>After your GitHub account is set-up you are ready to explore the service. You
+should update the profile information at the very least before proceeding.</p>
+
+<p>Exercise 9:</p>
+
+<p>Synchronise a local repository with an empty remote repository of the same name
+on GitHub.</p>
+
+<p><u>Command Line Junkies Only</u></p>
+
+<p>These commands create an empty repository 'sample' on GitHub and push the
+content of the local repository to your GitHiub account. Substitute your GitHub
+account name for 'user_name' and type your account password when prompted.</p>
+
+<pre><code>$ curl -u user_name https://api.github.com/user/repos \
+        -d "{\"name\":\"sample\",\"description\":\"military aircraft\"}"
+Enter host password for user 'gdhorne':
+</code></pre>
+
+<p>The repository transaction record shows the type of information tracked by
+GitHub. This data can be queried via the GitHub Developer API.</p>
+
+<p><u>Everyone Else</u></p>
+
+<p>Create an empty repository on GitHub using the website.</p>
+
+<p><u>Command Line Junkies and Everyone Else Reunite</u></p>
+
+<pre><code>$ git remote add origin https://github.com/user_name/sample.git
+$ git push origin master
+Username for 'https://github.com': gdhorne
+Password for 'https://gdhorne@github.com': 
+Counting objects: 9, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (9/9), 681 bytes | 0 bytes/s, done.
+Total 9 (delta 0), reused 0 (delta 0)
+To https://github.com/gdhorne/sample.git
+ * [new branch]      master -&gt; master
+</code></pre>
+
+<p>The .git extension in the repository name is optional.</p>
+
+<p>When you check the GitHub repository 'sample' there is no branch named
+'aircraft'. This demonstrates that pushing from the local repository to a
+remote repository only applies to the currently active repository branch or
+the explicitly named branch as in this example. If you want to push the
+aircraft branch to GitHub,</p>
+
+<pre><code>$ git push origin aircraft
+Username for 'https://github.com': gdhorne
+Password for 'https://gdhorne@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/gdhorne/sample.git
+ * [new branch]      aircraft -&gt; aircraft
+</code></pre>
+
+<p>Consequently, it is possible to have branches in the local repository which
+never appear in the remote repository.</p>
+
+<p>Exercise 10:</p>
+
+<p>Clone an existing repository from GitHub.</p>
+
+<pre><code>$ git clone https://github.com/user_name/sample
+</code></pre>
+
+<p>If a subdirectory within the current working directory has the same name as the
+repository, an error message is displayed and the repository cloning fails.</p>
+
+<p>A <a href="https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf" target="<em>blank">cheatsheet</a> for Git and GitHub has been prepared by the folks at <a href="https://github.com" target="</em>blank">GitHub</a>.</p>
+		</div>
+		<div class="menu">
+			<a href="#top">&#47;&#92;</a>
+		</div>
+
+	</div><!-- /archives -->
+
+</div><!-- /container -->
+
+</body>
+</html>

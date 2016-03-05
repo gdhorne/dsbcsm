@@ -1,0 +1,158 @@
+TITLE: Writing Documentation (CLI)
+AUTHOR: gdhorne
+DATE: Fri Mar 4 03:05:22 UTC 2016
+DESC: writing documentation the easy way
+FORMAT: markdown
+-----
+BODY:
+
+The [markdown language][2007], created by John Gruber, is relatively small and easy to learn in comparison to markup languages such as HTML and XML.
+
+### Sample Markdown
+
+File: [sample.md](../../resources/sample.md)
+
+With a portion of this blog as an example we explore some of the more common markdown elements.
+
+<pre>
+    Prologue
+    ===
+
+    # Introduction
+
+    During the next year you will learn the fundamentals of data science. 
+    Surviving the nine courses which make up the [Data Science 
+    Specialization][0001] offered by [Johns Hopkins University][jhu] requires a
+    **strategy**.
+
+    To this end, the focus of the ten-course series including a capstone
+    project is to provide the learner with:
+
+    1. an introduction to the key ideas behind reproducible research,
+    2. an introduction to the tools and techniques to transform raw
+        data into a presentable report,
+    4. an opportunity to gain hands-on practice so you can learn the
+        techniques for yourself, and
+    3. an appreciation of the mathematics & statistics involved in
+        data science.
+    
+    ## Core Courses
+
+    The courses comprising the Data Science Specialization are:
+
+    * Data Scientist's Toolbox
+    * R Programming
+    * Exploratory Data Analysis
+    * Getting and Cleaning Data
+    * Reproducible Research
+    * Statistical Inference
+    * Regression Models
+    * Practical Machine Learning
+    * Developing Data Products
+
+    
+    [0001]: https://www.coursera.org/specializations/jhu-data-science
+    [jhu]: http://www.jhu.edu
+</pre>
+*Listing 1 Sample markdown document*
+
+### Markdown Syntax and the Sample Document
+
+So you can immediately practise each of the markdown elements used in the
+sample document a concise description is supplied with references to the sample
+document.
+
+<u>Font Modifiers</u>
+
+There are two styles of font modifier supported by standard markdown:
+
+* bold (text surrounded by **)
+* italics (text surrounded by *)
+
+From the sample document we see that 'strategy' is modified during conversion to
+render bolded, whilst 'Figure 1 Course dependency diagram' is modified during
+conversion to render italicised.
+
+<u>Headings</u>
+
+There are two styles of headers supported by standard markdown:
+
+* setext
+    * First-level (text underlined by at least 3 equal-signs)
+    * Secondary-level (text underlined by at least 3 dashes)
+* atx
+    * First-level (# preceding text)
+    * Secondary-level (## preceding text)
+    * Third-level (### preceding text)
+    * Fourth-level (#### preceding text)
+
+From the sample document we see that 'Prologue' and 'Introduction' are
+first-level headers, and 'Core Courses' is a second-level header.
+
+<u>Links</u>
+
+There are two styles of links supported by standard markdown:
+
+* inline
+    * URL: [random website][website]
+* reference
+    * id: [random website][string of digits | string of terms]
+
+From the sample document we see that 'Data Science Specialization' is
+referenced by the id label (0001) whereas 'John Hopkins University' is
+referenced by the id label (jhu). The actual URLs are collected at the end of
+the same document although the labels could appear anywhere in the document.
+
+<u>Lists</u>
+
+There are two styles of lists supported by standard markdown:
+
+* ordered list
+    * number (followed by an optional period and two mandatory spaces; physical ordering overrides numeric label during conversion)
+
+* unordered list
+    * \* (asterisk)
+    * \- (dash)
+    * \+ (plus)
+
+From the sample document we see an ordered list containing the learner outcomes
+and an unordered list containing the names of each of the nine core courses.
+
+### Hands-on Practise
+
+A text editor combined with a markdown-to-html converter are the only tools
+necessary to experiment with the markdown-to-HTML conversion process.
+
+Exercise 1:
+
+The first work-flow involves use of nano, markdown, and the bash command shell.
+
+    $ nano sample.md
+    $ markdown sample.md
+    $ markdown sample.md > sample.html
+
+Exercise 2:
+
+The second work-flow makes use of vim and the standlone R Console interactive
+command shell with the assistance of the R package 'markdown'.
+
+	$ vim sample.md
+	$ R
+	> install.packages('markdown')
+	> library(markdown)
+	> cat(markdownToHTML('sample.md'))
+	> markdownToHTML('sample.md', 'sample.html')
+	> quit()
+
+To view sample.html at the command line we use a text-mode web browser. To exit
+the web browser type 'q' followed by 'y'.
+
+	$ w3m sample.html  # any images will not be rendered
+
+Later in the boot-camp we learn how to produce a markdown document combining
+text and executable R code using R markdown with command line R and
+RStudio. The output formats include HTML, MD, and PDF.
+
+[2007]: https://daringfireball.net/projects/markdown/
+
+END-----

@@ -1,0 +1,31 @@
+TITLE: Welcome to Boot-Camp
+AUTHOR: gdhorne
+DATE: Tue Mar  1 06:27:39 UTC 2016
+DESC: introduction to data science boot-camp
+FORMAT: markdown
+-----
+BODY:
+
+Welcome recruits!
+
+I have served as a Community Teaching Assistant (CTA) and Community Mentor for 
+various courses in the [Data Science Specialization][1000] offered by
+[Johns Hopkins University][1001] between May 2014 and April 2016.
+
+The [Data Science Specialization][1000] is a challenging nine-course sequence
+focusing on the fundamentals of data science. Success requires a strategy.
+The purpose of this blog to support each of you with the knowledge and practical 
+skills to complete the specialisation. The Data Science Boot-Camp Survival
+Manual has been developed independently of Johns Hopkins University and 
+Coursera. It is provided as a convenience to participants in the Data Science
+Specialization and as a practical introduction to data science for the general
+public.
+
+Read the full introduction to the blog in the article
+[Data Science Boot-Camp](./articles/data_science_boot-camp/index.html)
+to discover how it aligns with the Data Science Specialization.
+
+[1000]: https://www.coursera.org/specializations/jhu-data-science
+[1001]: https://www.jhu.edu
+
+END-----

@@ -1,0 +1,112 @@
+TITLE: Data Scientist's Toolbox
+AUTHOR: gdhorne
+DATE: Wed Mar 2 07:33:35 UTC 2016
+DESC: foundational course providing a high-level overview of the data science specialisation
+FORMAT: markdown
+-----
+BODY:
+
+>We shall neither fail nor falter; we shall not weaken or tire...give us the tools and we will finish the job. - Winston Churchill, Prime Minister of Great Britain
+
+
+**Primary Instructor:** Jeff Leek, MS, PhD (Biostatistics)
+
+The foundational course, [Data Scientist's Toolbox][1002], is a high-level 
+overview of the [Data Science Specialization][1000].  This course lays the 
+groundwork for the nine-course series plus capstone project. This course 
+introduces the operating system command line, the statistical programming 
+language, the statistical computing and graphing integrated development
+environment, and the version/revision control system selected by the 
+[Data Science Specialization Lab][1004] in the Biostatistics Department of 
+[Johns Hopkins University][1001].
+
+### Boot-Camp Requirements
+
+To successfully complete the hands-on boot-camp exercises and course assignments
+(quizzes, programming tasks, and course projects) BASH, Git, R, and RStudio must
+be installed on your computer or a hosted environment. Whether these
+applications are installed natively or in a virualised environment on your
+computer, the tutorials presented in this boot-camp will be beneficial. See the
+[Toolbox for Tools](./articles/toolbox-for_tools/index.html) tutorial.
+
+A GitHub account is mandatory because some courses in the
+[Data Science Specialization][1000] have peer-assessment activities that must
+be accessible to peer evaluators (other learners in the course).
+
+Internet access is necessary to fully participate in boot-camp as well as the
+courses.
+
+### Learning Objectives
+
+By the time we have completed the Data Scientist's Toolbox section of boot-camp
+we will be able to:
+
+- deploy a virualised environment containing some of the tools typically used
+by data analysts and data scientists
+- navigate and manipulate the file system
+- create and manage local and remote repositories
+- create and edit documentation
+- install packages for the statistical programming environment
+- understand the interactive and scripted modes of the statistical programming environment
+- perform these tasks at the command line and within a graphical user environment
+ 
+A recurring theme throughout boot-camp will be a comprehensive approach to
+learning fundamental skills for data science regardless of data set.
+
+### Tools of the Data Analyst and Data Scientist
+
+Our toolbox is stocked with an operating system command shell (bash), a
+statistical computing and graphing suite (R), an integrated development
+environment for the statistical computing and graphing suite (RStudio Server),
+a version/revision control system (git), along with text editors
+(vim and nano) and a document formatting language (markdown). We learn how to
+set-up our work environment in the
+[Toolbox for Tools](../toolbox_for_tools/index.html) tutorial.
+
+### Command Line Orientation
+
+[RStudio][2014] provides seamless integration with the file system to navigate and
+manipulate files, the version control system to manage and synchronise local
+and remote source code repositories, and the statistical computation and
+software development envrionment. However, becoming comfortable with the
+command line will improve our productivity as data analysis projects increase
+in sophistication and work-flow automation arises.
+
+We learn how to interact with our toolbox at the command line level in the
+[File System Navigation and Manipulation](../file_system_navigation_and_manipulation_cli/index.html)
+, [Version Control](../version_control_cli/index.html),
+[R Package Installation](../package_installation_cli/index.html), and
+[Statistical Programming Environment (CLI)](../statistical_programming_environment_cli/index.html)
+tutorials. Afterwards we learn to accomplsih the same tasks within an unified
+application by way of the
+[Statistical Programming Environment (GUI)](../statistical_programming_environment_gui/index.html)
+tutorial.
+
+Writing data analysis reports which combine exectable code and the descriptive
+narrative is a fundamental part of reproducible research. Initially, we focus
+on preparing and processing documents containing only descriptive narrative in
+the [Writing Documentation](../writing_documentation_cli/index.html) tutorial.
+
+### Thoughts
+
+As a data science recruit outfitted with your kit and basic skills we are
+ready to move onto the next phase of basic training. The next course in the
+[Data Science Specialization][1000] is [R Programming][1003]; your instructor
+awaits.
+The features and capabiilities of these tools extend beyond those presented.
+While the graphical user interface is convenient, we highly recommend and
+encourage every recruit to become comfortable with the command line as well.
+
+Boot-camp has been easy up to this point. Read the *Data Science Boot-Camp
+Survival Manual* regularly to avoid washing-out. 
+
+Recruits, dismissed.
+
+[1000]: https://www.coursera.org/specializations/jhu-data-science
+[1001]: https://www.jhu.edu
+[1002]: https://www.coursera.org/learn/data-scientists-tools
+[1003]: https://www.coursera.org/learn/r-programming
+[1004]: http://jhudatascience.org
+[2014]: https://www.rstudio.com
+
+END-----
